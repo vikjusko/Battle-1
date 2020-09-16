@@ -1,11 +1,22 @@
 class Player 
-    attr_reader :name
-    def initialize(name = "A name")
+    attr_reader :name, :hp
+    DEFAULT_HEALTH = 100
+    DEFAULT_ATTACK = 10
+
+    def initialize(name, hp = DEFAULT_HEALTH )
         @name = name
+        @hp = hp
     end
 
-    def say_name
-        @name
-        
+
+
+    def be_attacked
+        @hp -= 10
     end
+
+    def attack(player)
+        player.be_attacked
+    end
+    
 end
+

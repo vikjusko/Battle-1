@@ -36,4 +36,10 @@ feature "Testing infrastructure" do
     expect(page).to have_content "It's Linuss turn"
   end 
 
+  scenario "I want to get a message when i lose" do
+    sign_in_and_play
+    11.times {attack_and_return}
+    expect(page).to have_content "Linus lost"
+  end
+
 end

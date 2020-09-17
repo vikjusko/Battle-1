@@ -15,11 +15,13 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
+  
     erb(:play)
   end
 
   get '/player_2_attack' do
     $game.attack($game.opponent)
+    $game.set_losing_message
     $game.switch_turns
     erb(:player_2_attack)
   end

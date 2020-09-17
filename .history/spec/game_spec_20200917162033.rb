@@ -1,12 +1,12 @@
 require 'game'
-require 'Player'
+require 'player'
 describe Game do 
-  subject(:game) { Game.new(player_1, player_2) }
-  let(:player_1) { instance_double(Player) }
-  let(:player_2) { instance_double(Player) }
+  subject(:game) { described_class.new(player_1, player_2) }
+  let(:player_1) { double :player }
+  let(:player_2) { double :player }
 
   it "contains an instance of 2 players" do
-    expect(game.players).to be_an_instance_of(Array)
+    expect(subject.players).to be_an_instance_of(Array)
   end
 
   it "has a current player that is initially defined as player2" do
@@ -15,7 +15,7 @@ describe Game do
 
   describe "#attack" do
     it "can attack a player" do
-      expect(player_1).to respond_to(:be_attacked)
+      expect(player_1).to receive(:be_attacked)
       game.attack(player_1)
     end
   #  it "it takes ten hp off the player" do

@@ -29,11 +29,6 @@ feature "Testing infrastructure" do
   expect(page).to have_content "It's Ollies turn"
   end 
 
-  scenario "I want to see that turns have switched after the attack" do
-    sign_in_and_play
-    click_link "Attack"
-    click_link "OK"
-    expect(page).to have_content "It's Linuss turn"
-  end 
+
 
 end

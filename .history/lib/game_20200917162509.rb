@@ -1,6 +1,6 @@
 require './lib/Player.rb'
 class Game
-  attr_reader :players, :current_player
+  attr_reader :player_1, :current_player
     def initialize(player_1 , player_2)
       @players = [player_1, player_2]
       @current_player = player_2
@@ -15,7 +15,7 @@ class Game
     end 
 
     def opponent
-      players.select { |player| player != @current_player }.first 
+      (@players - @current_player).first 
     end 
 
 end

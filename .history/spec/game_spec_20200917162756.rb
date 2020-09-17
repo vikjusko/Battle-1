@@ -1,9 +1,9 @@
 require 'game'
 require 'Player'
 describe Game do 
-  subject(:game) { Game.new(player_1, player_2) }
-  let(:player_1) { instance_double(Player) }
-  let(:player_2) { instance_double(Player) }
+  subject(:game) { described_class.new(player_1, player_2) }
+  let(:player_1) { instance_double("Player") }
+  let(:player_2) { instance_double("Player") }
 
   it "contains an instance of 2 players" do
     expect(game.players).to be_an_instance_of(Array)

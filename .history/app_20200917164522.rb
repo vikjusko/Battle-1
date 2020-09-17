@@ -19,7 +19,7 @@ class Battle < Sinatra::Base
   end
 
   get '/player_2_attack' do
-    $game.attack($game.opponent)
+    $game.attack($game.players[0])
     $game.switch_turns
     erb(:player_2_attack)
   end

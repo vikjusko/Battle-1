@@ -11,11 +11,11 @@ class Game
     end
 
     def switch_turns
-      @current_player = opponent
+      @current_player == opponent
     end 
 
     def opponent
-      players.select { |player| player != @current_player }.first 
+      @players.select { |player| player != @current_player }.first 
     end 
 
 end

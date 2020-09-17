@@ -1,4 +1,4 @@
-require './lib/Player.rb'
+require './Player'
 class Game
 
     def attack(player)

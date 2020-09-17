@@ -1,5 +1,5 @@
 require 'game'
-#require 'player'
+require 'player'
 describe Game do 
   subject(:game) { described_class.new }
   let(:player_double) { double :player }
@@ -11,10 +11,10 @@ describe Game do
       game.attack(player_double)
     end
 
-  #  it "it takes ten hp off the player" do
-  #    you = Person.new
-  #    expect{ game.attack(player_double) }.to change { player_double.hp }.by(-10)
-  #  end
+    it "it takes ten hp off the player" do
+      you = Player.new 
+      expect{ game.attack(you) }.to change{ you.hp }.by(-10)
+    end
 
   end
 

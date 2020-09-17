@@ -11,10 +11,9 @@ describe Game do
       game.attack(player_double)
     end
 
-  #  it "it takes ten hp off the player" do
-  #    you = Person.new
-  #    expect{ game.attack(player_double) }.to change { player_double.hp }.by(-10)
-  #  end
+    it "it takes ten hp off the player" do
+      expect{ game.attack(player_double) }.to change { player_double.hp }.by(-10)
+    end
 
   end
 

@@ -7,7 +7,7 @@ feature "Testing infrastructure" do
 
   scenario "Can i see players hit points" do
     sign_in_and_play
-    expect(page).to have_content "HP: 100"
+    expect(page).to have_content "HP: 60"
   end
 =begin
   scenario "I want to beat up linus" do
@@ -20,8 +20,8 @@ feature "Testing infrastructure" do
     sign_in_and_play
     click_link "Attack"
     click_link 'OK'
-    expect(page).not_to have_content "Linus HP: 100"
-    expect(page).to have_content "Linus HP: 90"
+    expect(page).not_to have_content "Linus HP: 60"
+    expect(page).to have_content "Linus HP: 50"
   end
 
 

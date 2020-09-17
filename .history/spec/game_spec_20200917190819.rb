@@ -5,7 +5,6 @@ describe Game do
   let(:player_1) { double :player }
   let(:player_2) { double :player }
 
-  #checked this in the walkthrough and it is "receive" rather than respond to"
   describe "#attack" do
     it "can attack a player" do
       expect(player_1).to receive(:be_attacked)
@@ -20,7 +19,7 @@ describe Game do
   it "has a current player that is initially defined as player2" do
     expect(game.current_player).to eq player_2
   end
-#changed this test to make sure it passes:
+
   describe "switch turns" do 
     it "switches turnes after the attack" do 
       expect{ game.switch_turns }.to change{ game.current_player}.to(player_1)

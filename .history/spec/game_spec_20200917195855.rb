@@ -5,7 +5,6 @@ describe Game do
   let(:player_1) { double :player }
   let(:player_2) { double :player }
 
-  #checked this in the walkthrough and it is "receive" rather than respond to"
   describe "#attack" do
     it "can attack a player" do
       expect(player_1).to receive(:be_attacked)

@@ -10,29 +10,25 @@ describe Game do
       expect(player_1).to receive(:be_attacked)
       game.attack(player_1)
     end
-  end
-  
-  it "contains an instance of 2 players" do
-    expect(game.players).to be_an_instance_of(Array)
-  end
-  
-  it "has a current player that is initially defined as player2" do
-    expect(game.current_player).to eq player_2
-  end
+  #  it "it takes ten hp off the player" do
+  #    you = Person.new
+  #    expect{ game.attack(player_double) }.to change { player_double.hp }.by(-10)
+  #  end
+end
+
+it "contains an instance of 2 players" do
+  expect(game.players).to be_an_instance_of(Array)
+end
+
+it "has a current player that is initially defined as player2" do
+  expect(game.current_player).to eq player_2
+end
 
   describe "switch turns" do 
     it "switches turnes after the attack" do 
+      game.attack(player_1)
       expect{ game.switch_turns }.to change{ game.current_player}.to(player_1)
     end 
   end 
 
-#  describe "it deducts points" do
- #   it "attacks the player and deducts points" do
- #     expect(player_1).to receive(:be_attacked).and change { player_1.hp }.by(10)
-#    end
-#  end
 end
-
-
-
-

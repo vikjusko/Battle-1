@@ -26,13 +26,4 @@ describe Game do
     end 
   end 
 
-#  describe "it deducts points" do
- #   it "attacks the player and deducts points" do
- #     expect(player_1).to receive(:be_attacked).and change { player_1.hp }.by(10)
-#    end
-#  end
 end
-
-
-
-

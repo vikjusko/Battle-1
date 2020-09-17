@@ -1,7 +1,7 @@
 require 'Player'
 describe Player do
     it "returns it's name" do
-    expect(subject.name).to eq (subject.name)
+    expect(subject.say_name).to eq (subject.name)
     end
 
     it {is_expected.to respond_to(:be_attacked)}

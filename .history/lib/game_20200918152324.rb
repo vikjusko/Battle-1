@@ -7,12 +7,8 @@ class Game
 
     end
 
-    def self.create(player1, player2)
-      @game = Game.new(player1, player2)
-    end 
-
-    def self.instance
-      @game
+    def self.create
+      @game 
     end 
 
     def attack

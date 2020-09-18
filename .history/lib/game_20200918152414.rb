@@ -11,9 +11,7 @@ class Game
       @game = Game.new(player1, player2)
     end 
 
-    def self.instance
-      @game
-    end 
+
 
     def attack
       opponent.be_attacked

@@ -4,7 +4,7 @@ require './lib/game.rb'
 
 class Battle < Sinatra::Base
   before do 
-  @game = Game.instance 
+  game = Game.instance 
   end 
 
   enable :sessions
@@ -13,7 +13,7 @@ class Battle < Sinatra::Base
   end
 
   post "/names" do
-    @game = Game.create(Player.new(params[:player_1]), Player.new(params[:player_2]))
+    game = Game.create(Player.new(params[:player_1]), Player.new(params[:player_2]))
     redirect '/play'
   end
 
